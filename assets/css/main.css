@@ -3327,3 +3327,28 @@ input, select, textarea {
 			}
 
 		}
+/* Sign-Up & Login Buttons */
+.auth-buttons {
+    display: flex;
+    justify-content: center; /* Center the buttons */
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.auth-buttons a {
+    display: inline-block;
+    padding: 12px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 16px;
+    border: 2px solid #ff5a5f;
+    color: #ff5a5f;
+    background-color: white;
+    transition: 0.3s;
+}
+
+.auth-buttons a:hover {
+    background: #ff5a5f;
+    color: white;
+}
