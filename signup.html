@@ -33,11 +33,21 @@
         const app = firebase.initializeApp(firebaseConfig);
         const auth = firebase.auth();
 
-        // signUp function
+        // signUp function in the global scope
         function signUp() {
             var email = document.getElementById("email").value;
             var password = document.getElementById("password").value;
 
+            // Check if the email and password are not empty
+            if (email === "" || password === "") {
+                alert("Please enter both email and password.");
+                return;
+            }
+
+            console.log("Email: ", email);
+            console.log("Password: ", password);
+
+            // Firebase SignUp process
             auth.createUserWithEmailAndPassword(email, password)
                 .then((userCredential) => {
                     alert("Account Created Successfully!");
@@ -45,6 +55,7 @@
                 })
                 .catch((error) => {
                     alert("Error: " + error.message);
+                    console.error(error);
                 });
         }
     </script>
