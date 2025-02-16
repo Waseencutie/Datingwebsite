@@ -13,12 +13,13 @@
         <button type="button" onclick="signUp()">Sign Up</button>
     </form>
 
+    <!-- Firebase Config and Script -->
     <script type="module">
         // Import Firebase SDK
         import { initializeApp } from "https://www.gstatic.com/firebasejs/9.0.0/firebase-app.js";
         import { getAuth, createUserWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/9.0.0/firebase-auth.js";
 
-        // Your Firebase configuration
+        // Firebase Configuration
         const firebaseConfig = {
             apiKey: "AIzaSyCU_618YJ8a1PjTyAhGpRW6h-kwBFxJT3w",
             authDomain: "lovehive-c22cb.firebaseapp.com",
@@ -33,7 +34,7 @@
         const app = initializeApp(firebaseConfig);
         const auth = getAuth(app);
 
-        // Define the signUp function before it is called
+        // Define the signUp function here
         function signUp() {
             var email = document.getElementById("email").value;
             var password = document.getElementById("password").value;
