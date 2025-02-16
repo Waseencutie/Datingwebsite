@@ -11,6 +11,34 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+    
+    <!-- Firebase Configuration -->
+    <script type="module">
+        // Import Firebase SDK (USE THIS VERSION)
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/9.0.0/firebase-app.js";
+        import { getAuth } from "https://www.gstatic.com/firebasejs/9.0.0/firebase-auth.js";
+        import { getFirestore } from "https://www.gstatic.com/firebasejs/9.0.0/firebase-firestore.js";
+        import { getStorage } from "https://www.gstatic.com/firebasejs/9.0.0/firebase-storage.js";
+
+        // Your Firebase configuration (PASTE YOURS HERE)
+        const firebaseConfig = {
+            apiKey: "AIzaSyCU_618YJ8a1PjTyAhGpRW6h-kwBFxJT3w",
+            authDomain: "lovehive-c22cb.firebaseapp.com",
+            projectId: "lovehive-c22cb",
+            storageBucket: "lovehive-c22cb.appspot.com",
+            messagingSenderId: "869625534585",
+            appId: "1:869625534585:web:12798580584ba7755ba8",
+            measurementId: "G-4K1WMKJ2JH"
+        };
+
+        // Initialize Firebase
+        const app = initializeApp(firebaseConfig);
+        const auth = getAuth(app);
+        const db = getFirestore(app);
+        const storage = getStorage(app);
+    </script>
+</head>
+
 	</head>
 	<body class="is-preload">
 		<!-- Wrapper -->
